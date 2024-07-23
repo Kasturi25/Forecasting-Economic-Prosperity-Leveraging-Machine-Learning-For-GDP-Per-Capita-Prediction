@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDP Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>GDP Analysis</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <label for="region">Region</label>
+                <input type="number" id="region" name="region" placeholder="Range 0 to 11" required>
+            </div>
+            <div class="form-group">
+                <label for="area">Area (sq. mi.)</label>
+                <input type="number" id="area" name="area" placeholder="Range 2 to 17075200" required>
+            </div>
+            <div class="form-group">
+                <label for="coastline">Coastline</label>
+                <input type="number" id="coastline" name="coastline" placeholder="Range 0.0 to 870.66" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="number" id="phone" name="phone" placeholder="Range 0 to 1000" required>
+            </div>
+            <div class="form-group">
+                <label for="crops">Crops</label>
+                <input type="number" id="crops" name="crops" placeholder="Range 0.0 to 50.68" required>
+            </div>
+            <div class="form-group">
+                <label for="birthrate">Birthrate</label>
+                <input type="number" id="birthrate" name="birthrate" placeholder="Range 0.0 to 50.68" required>
+            </div>
+            <div class="form-group">
+                <label for="agriculture">Agriculture</label>
+                <input type="number" id="agriculture" name="agriculture" placeholder="Range 0.0 to 0.769" required>
+            </div>
+            <div class="form-group">
+                <label for="population">Population</label>
+                <input type="number" id="population" name="population" placeholder="Range 7026 to 1313973713" required>
+            </div>
+            <div class="form-group">
+                <label for="population_density">Population Density (per sq. mi.)</label>
+                <input type="number" id="population_density" name="population_density" placeholder="Range 0.0 to 16271.5" required>
+            </div>
+            <div class="form-group">
+                <label for="net_migration">Net Migration</label>
+                <input type="number" id="net_migration" name="net_migration" placeholder="Range -20.99 to 23.06" required>
+            </div>
+            <div class="form-group">
+                <label for="arable">Arable (%)</label>
+                <input type="number" id="arable" name="arable" placeholder="Range 0.0 to 62.11" required>
+            </div>
+            <div class="form-group">
+                <label for="climate">Climate</label>
+                <input type="number" id="climate" name="climate" placeholder="Range 1.0 to 4.0" required>
+            </div>
+            <div class="form-group">
+                <label for="deathrate">Deathrate</label>
+                <input type="number" id="deathrate" name="deathrate" placeholder="Range 2.29 to 29.74" required>
+            </div>
+            <div class="form-group">
+                <label for="industry">Industry</label>
+                <input type="number" id="industry" name="industry" placeholder="Range 0.02 to 0.9059999999999999" required>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
